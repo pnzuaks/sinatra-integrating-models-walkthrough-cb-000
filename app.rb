@@ -14,7 +14,7 @@ class App < Sinatra::Base
     @consonants = @analyzed_text.count_of_vowels
 
     @most_used_letter = @analyzed_text.most_used_letter.keys
-    @num_times = @analyzed_text.most_used_letter
+    @num_times = @analyzed_text.most_used_letter.values
     erb :results
   end
 end
